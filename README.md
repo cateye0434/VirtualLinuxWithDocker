@@ -1,17 +1,16 @@
 # Virtual Linux With Docker
 
 
-## Ziel des Projekts: Eigenständiger Aufbau einer virtualisierten Linux-Serverumgebung mit Docker für NGINX, MySQL und phpMyAdmin./ Independent setup of a virtualized Linux server environment using Docker (NGINX, MySQL, phpMyAdmin).
+## Ziel des Projekts 
+Eigenständiger Aufbau einer virtualisierten Linux-Serverumgebung mit Docker für NGINX, MySQL und phpMyAdmin./ Independent setup of a virtualized Linux server environment using Docker (NGINX, MySQL, phpMyAdmin).
 
 ## VM Setup
-
 - VirtualBox
 - Ubuntu Server 22.04
 - 2 GB RAM
 - 20 GB Disk
 
 ## Architektur
-
 Die Umgebung besteht aus mehreren Docker-Containern, die über ein internes Docker-Netzwerk miteinander kommunizieren.
 
 - Ein NGINX-Container stellt eine einfache Website bereit
@@ -28,7 +27,6 @@ Zugriff erfolgt über definierte Ports:
 Die Datenbank ist nicht direkt von außen erreichbar, sondern nur innerhalb des Docker-Netzwerks, was die Sicherheit erhöht.
 
 ## Verwendete Tools
-
 - Ubuntu Server (virtuelle Maschine)
 - Docker & Docker Compose (Containerisierung)
 - NGINX (Webserver)
