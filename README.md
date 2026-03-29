@@ -1,6 +1,43 @@
 # Virtual Linux With Docker
-Eigenständiger Aufbau einer virtualisierten Linux-Serverumgebung mit Docker für NGINX, MySQL und phpMyAdmin./ Independent setup of a virtualized Linux server environment using Docker (NGINX, MySQL, phpMyAdmin).
 
+
+## Ziel des Projekts: Eigenständiger Aufbau einer virtualisierten Linux-Serverumgebung mit Docker für NGINX, MySQL und phpMyAdmin./ Independent setup of a virtualized Linux server environment using Docker (NGINX, MySQL, phpMyAdmin).
+
+## VM Setup
+
+- VirtualBox
+- Ubuntu Server 22.04
+- 2 GB RAM
+- 20 GB Disk
+
+## Architektur
+
+Die Umgebung besteht aus mehreren Docker-Containern, die über ein internes Docker-Netzwerk miteinander kommunizieren.
+
+- Ein NGINX-Container stellt eine einfache Website bereit
+- Ein MySQL-Container dient als Datenbank
+- Ein phpMyAdmin-Container ermöglicht die Verwaltung der Datenbank über den Browser
+
+Die Container sind logisch voneinander getrennt, können aber intern miteinander kommunizieren (z. B. phpMyAdmin → MySQL).
+
+Zugriff erfolgt über definierte Ports:
+
+- Port 8080 → Webserver (NGINX)
+- Port 8081 → phpMyAdmin
+
+Die Datenbank ist nicht direkt von außen erreichbar, sondern nur innerhalb des Docker-Netzwerks, was die Sicherheit erhöht.
+
+## Verwendete Tools
+
+- Ubuntu Server (virtuelle Maschine)
+- Docker & Docker Compose (Containerisierung)
+- NGINX (Webserver)
+- MySQL (Datenbank)
+- phpMyAdmin (Datenbankverwaltung)
+- VirtualBox (Virtualisierung)
+
+
+## Ausführung
 Ich erstelle hier eine VMBox mit Linux-Server(Ubuntu 64-bit). Nun nutze ich "sudo apt update" in der Bash, um Index-Files lokaler Pakete mit ihren Quellrepositories abzugleichen und eventuelle Updates zu finden und zu installieren. Danach installiere Docker mit "sudo apt install docker.io -y" und teste die Installation mit "docker --version" und "sudo apt install docker-compose -y". 
 Um ein eigenes Projekt zu starten, erstelle ich ein Verzeichnis mit mkdir ("mkdir sysadmin-homelab"), gehe in dieses Verzeichnis mit "cd sysadmin-homelab".
 Nun erstelle ich eine yml-File mit dem GNU nano-Editor ("nano docker-compose.yml"), mit der ich per yml-File Nginx-Server mit phpMyAdmin für die MySQL-Datenbank installiere. Hier werden Port 8080 und 8081 des Hosts auf Port 80 der VM weitergeleitet.
