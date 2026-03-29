@@ -1,5 +1,5 @@
-# VirtualLinuxWithDocker
-Eigenständiger Aufbau einer virtualisierten Linux-Serverumgebung mit Docker (NGINX, MySQL, phpMyAdmin)./ Independent setup of a virtualized Linux server environment using Docker (NGINX, MySQL, phpMyAdmin).
+# Virtual Linux With Docker
+Eigenständiger Aufbau einer virtualisierten Linux-Serverumgebung mit Docker für NGINX, MySQL und phpMyAdmin./ Independent setup of a virtualized Linux server environment using Docker (NGINX, MySQL, phpMyAdmin).
 
 Ich erstelle hier eine VMBox mit Linux-Server(Ubuntu 64-bit). Nun nutze ich "sudo apt update" in der Bash, um Index-Files lokaler Pakete mit ihren Quellrepositories abzugleichen und eventuelle Updates zu finden und zu installieren. Danach installiere Docker mit "sudo apt install docker.io -y" und teste die Installation mit "docker --version" und "sudo apt install docker-compose -y". 
 Um ein eigenes Projekt zu starten, erstelle ich ein Verzeichnis mit mkdir ("mkdir sysadmin-homelab"), gehe in dieses Verzeichnis mit "cd sysadmin-homelab".
@@ -31,7 +31,7 @@ Ich löse das Problem, indem ich die VM herunterfahre, auswähle und in ihren Sy
 
 ![Screenshot 2026-03-29 225520](https://github.com/user-attachments/assets/c0e0574d-fac5-49ce-a148-da0f85094b93)
 
-![Screenshot 2026-03-29 225841](https://github.com/user-attachments/assets/448a29ee-fe4e-46ef-a047-6563e49ac08e)
+![Screenshot 2026-03-29 225841](https://github.com/user-attachments/assets/9b2adfea-c7b6-4b53-9f9d-89e9dfe67452)
 
 
 
