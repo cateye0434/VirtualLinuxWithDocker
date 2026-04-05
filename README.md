@@ -44,24 +44,12 @@ Nun erstelle ich eine yml-File mit dem GNU nano-Editor ("nano docker-compose.yml
 ![erläuterung_ports_s_chat](https://github.com/user-attachments/assets/de5655b5-f2fb-4a00-9166-a7ea26d172bf)
 
 
-<YML>
-version: '3'
 
-services:
-  web:
-    image: nginx
-    ports:
-      - "8080:80"
+## yml-File
 
-  db:
-    image: mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: root
+![yml](https://github.com/user-attachments/assets/52dfd794-17df-4dda-b82b-df8ff75c85c1)
 
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    ports:
-      - "8081:80"
+
       
 Schließlich bringe ich den Container mit "sudo docker-compose up -d" im Hintergrund zum laufen und prüfe mit "docker ps" die Container-Namen und -IDs. Mit "ip a" sehe ich die IP auf dem Hostsystem, unter der ich den Server erreichen kann. 
 
