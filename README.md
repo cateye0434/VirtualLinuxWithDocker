@@ -82,6 +82,7 @@ Schließlich kann man z.B. noch eine Datenbank mit entsprechenden MySQL-Befehlen
 
 ![table](https://github.com/user-attachments/assets/4fd71364-2558-4b14-84d4-818be429ba1f)
 
+...
 CREATE TABLE Users (
     Users_ID INT AUTO_INCREMENT PRIMARY KEY,
     Users_Name VARCHAR(100) NOT NULL,
@@ -130,6 +131,8 @@ CREATE TABLE ItemSession (
         ON DELETE CASCADE,
     UNIQUE (Item_ID, Session_ID)
 );
+...
+
 
 ![phpMyAdmin_SQL](https://github.com/user-attachments/assets/34f0d62f-917d-43ad-bbc6-883fa9da5443)
 
