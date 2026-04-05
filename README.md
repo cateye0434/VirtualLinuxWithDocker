@@ -90,8 +90,7 @@ CREATE TABLE Users (
 
     Salt VARCHAR(100) NOT NULL
 );
-```
-...
+
 CREATE TABLE Session (
     Session_ID INT AUTO_INCREMENT PRIMARY KEY,
     Session_Date DATETIME NOT NULL,
@@ -102,14 +101,12 @@ CREATE TABLE Session (
         REFERENCES Users(Users_ID)
         ON DELETE CASCADE
 );
-...
-...
+
 CREATE TABLE Subject (
     Subject_ID INT AUTO_INCREMENT PRIMARY KEY,
     Subject_Name VARCHAR(100)
 );
-...
-...
+
 CREATE TABLE Item (
     Item_ID INT AUTO_INCREMENT PRIMARY KEY,
     Item_Name VARCHAR(100),
@@ -120,8 +117,7 @@ CREATE TABLE Item (
         REFERENCES Subject(Subject_ID)
         ON DELETE CASCADE
 );
-...
-...
+
 CREATE TABLE ItemSession (
     Item_ID INT NOT NULL,
     Session_ID INT NOT NULL,
@@ -135,7 +131,7 @@ CREATE TABLE ItemSession (
         ON DELETE CASCADE,
     UNIQUE (Item_ID, Session_ID)
 );
-...
+```
 
 
 ![phpMyAdmin_SQL](https://github.com/user-attachments/assets/34f0d62f-917d-43ad-bbc6-883fa9da5443)
