@@ -90,7 +90,8 @@ CREATE TABLE Users (
 
     Salt VARCHAR(100) NOT NULL
 );
-
+...
+...
 CREATE TABLE Session (
     Session_ID INT AUTO_INCREMENT PRIMARY KEY,
     Session_Date DATETIME NOT NULL,
@@ -101,12 +102,14 @@ CREATE TABLE Session (
         REFERENCES Users(Users_ID)
         ON DELETE CASCADE
 );
-
+...
+...
 CREATE TABLE Subject (
     Subject_ID INT AUTO_INCREMENT PRIMARY KEY,
     Subject_Name VARCHAR(100)
 );
-
+...
+...
 CREATE TABLE Item (
     Item_ID INT AUTO_INCREMENT PRIMARY KEY,
     Item_Name VARCHAR(100),
@@ -117,7 +120,8 @@ CREATE TABLE Item (
         REFERENCES Subject(Subject_ID)
         ON DELETE CASCADE
 );
-
+...
+...
 CREATE TABLE ItemSession (
     Item_ID INT NOT NULL,
     Session_ID INT NOT NULL,
