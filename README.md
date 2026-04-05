@@ -78,12 +78,15 @@ Schließlich waren der Server und phpMyAdmin über den Host erreichbar, die MySQ
 ![phpmyadmin_screenshot2](https://github.com/user-attachments/assets/2a919e64-17c0-4a0f-9b50-29783f134504)
 
 
-Schließlich kann man z.B. noch eine Datenbank mit entsprechenden MySQL-Befehlen anlegen. Hier ein Beispiel für eine Nutzerdatenbank einer Lernsoftware mit den Tabellen Users, Session, Subject, Item, Item_Session für 
+Schließlich kann man z.B. noch eine Datenbank mit entsprechenden MySQL-Befehlen anlegen. Hier ein Beispiel für eine Nutzerdatenbank einer Lernsoftware mit den Tabellen Users, Session, Subject, Item, Item_Session:
+
+![table](https://github.com/user-attachments/assets/4fd71364-2558-4b14-84d4-818be429ba1f)
 
 CREATE TABLE Users (
     Users_ID INT AUTO_INCREMENT PRIMARY KEY,
     Users_Name VARCHAR(100) NOT NULL,
     Hash VARCHAR(100) NOT NULL,
+
     Salt VARCHAR(100) NOT NULL
 );
 
