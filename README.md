@@ -82,7 +82,7 @@ Schließlich kann man z.B. noch eine Datenbank mit entsprechenden MySQL-Befehlen
 
 ![table](https://github.com/user-attachments/assets/4fd71364-2558-4b14-84d4-818be429ba1f)
 
-...
+```
 CREATE TABLE Users (
     Users_ID INT AUTO_INCREMENT PRIMARY KEY,
     Users_Name VARCHAR(100) NOT NULL,
@@ -90,7 +90,7 @@ CREATE TABLE Users (
 
     Salt VARCHAR(100) NOT NULL
 );
-...
+```
 ...
 CREATE TABLE Session (
     Session_ID INT AUTO_INCREMENT PRIMARY KEY,
