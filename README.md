@@ -47,7 +47,25 @@ Nun erstelle ich eine yml-File mit dem GNU nano-Editor ("nano docker-compose.yml
 
 ## yml-File
 
-![yml](https://github.com/user-attachments/assets/52dfd794-17df-4dda-b82b-df8ff75c85c1)
+```
+version: '3'
+
+services:
+  web:
+    image: nginx
+    ports:
+      - "8080:80"
+
+  db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8081:80"
+```
 
 
       
@@ -80,7 +98,6 @@ Schließlich waren der Server und phpMyAdmin über den Host erreichbar, die MySQ
 
 Schließlich kann man z.B. noch eine Datenbank mit entsprechenden MySQL-Befehlen anlegen. Hier ein Beispiel für eine Nutzerdatenbank einer Lernsoftware mit den Tabellen Users, Session, Subject, Item, Item_Session:
 
-![table](https://github.com/user-attachments/assets/4fd71364-2558-4b14-84d4-818be429ba1f)
 
 ```
 CREATE TABLE Users (
