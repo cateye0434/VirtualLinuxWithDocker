@@ -85,7 +85,7 @@ Ich löse das Problem, indem ich die VM herunterfahre, auswähle und in ihren Sy
 
 Außerdem war eine Zeile der yml-Datei falsch eingerückt, was ich geändert habe.
 
-Schließlich waren der Server und phpMyAdmin über den Host erreichbar, die MySQL-Datenbank soll bewusst nicht "von außen"/ über den Host erreichbar sein, um Datensicherheit zu gewährleisten.
+Schließlich ist der Server und phpMyAdmin über den Host erreichbar, die MySQL-Datenbank soll bewusst nicht "von außen"/ über den Host erreichbar sein, um Datensicherheit zu gewährleisten.
 
 ![nginx_screenshot](https://github.com/user-attachments/assets/3671bc6b-ae59-42bd-875e-0ec79dc6fae2)
 
@@ -94,6 +94,12 @@ Schließlich waren der Server und phpMyAdmin über den Host erreichbar, die MySQ
 
 
 ![phpmyadmin_screenshot2](https://github.com/user-attachments/assets/2a919e64-17c0-4a0f-9b50-29783f134504)
+
+
+Nun habe ich eine einfache Firewall mit ufw eingerichtet ("sudo apt update", "sudo apt install ufw -y). Diese teste ich mit "sudo ufw status", die Firewall wurde nicht eingerichtet und ist deshalb noch inaktiv. 
+Ich lasse SSH zu, um mich nicht selbst auszusperren, mit "sudo ufw allow 22" und "sudo ufw allow 8080" und
+"sudo ufw allow 8081" um die Ports für myPhpAdmin und nginx erreichbar zu machen. Schließlich aktiviere ich die Firewall mit "sudo ufw enable" und Key "y" und teste mit "sudo ufw status". Hier sind nun die Ports 8080 und 8081 wie gewünscht offen.
+
 
 
 Schließlich kann man z.B. noch eine Datenbank mit entsprechenden MySQL-Befehlen anlegen. Hier ein Beispiel für eine Nutzerdatenbank einer Lernsoftware mit den Tabellen Users, Session, Subject, Item, Item_Session:
