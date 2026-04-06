@@ -100,6 +100,11 @@ Nun habe ich eine einfache Firewall mit ufw eingerichtet ("sudo apt update", "su
 Ich lasse SSH zu, um mich nicht selbst auszusperren, mit "sudo ufw allow 22" und "sudo ufw allow 8080" und
 "sudo ufw allow 8081" um die Ports für myPhpAdmin und nginx erreichbar zu machen. Schließlich aktiviere ich die Firewall mit "sudo ufw enable" und Key "y" und teste mit "sudo ufw status". Hier sind nun die Ports 8080 und 8081 wie gewünscht offen.
 
+![firewall](https://github.com/user-attachments/assets/65f6e0f3-4021-4af4-a7ec-88c6e794655a)
+
+
+![server_amina](https://github.com/user-attachments/assets/221d548f-dd2c-4fe9-ba40-38e7d090aac8)
+
 
 
 Schließlich kann man z.B. noch eine Datenbank mit entsprechenden MySQL-Befehlen anlegen. Hier ein Beispiel für eine Nutzerdatenbank einer Lernsoftware mit den Tabellen Users, Session, Subject, Item, Item_Session:
